@@ -14,5 +14,5 @@
         "psr-4": {
             "alarm3d\\leaflet\\plugins\\routing\\": "src"
         }
-    },
+    }
 }
