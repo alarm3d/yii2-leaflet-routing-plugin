@@ -1,46 +1,18 @@
 {
     "name": "alarm3d/yii2-leaflet-routing-plugin",
     "description": "Yii2 LeafLet Plugin routing to Leaflet.",
-    "keywords": [
-        "yii",
-        "yii2",
-        "yii 2",
-        "extension",
-        "widget",
-        "maps",
-        "leaflet",
-        "plugin"
-    ],
-    "type": "yii2-extension",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "authors": [
         {
-            "name": "alarm3d",
-            "email": "",
-            "role": "Developer"
+            "name": "alarm3d"
         }
     ],
-    "support": {
-        "issues": "https://github.com/alarm3d/yii2-leaflet-routing-plugin/issues",
-        "source": "https://github.com/alarm3d/yii2-leaflet-routing-plugin"
-    },
     "require": {
         "2amigos/yii2-leaflet-extension": "1.*"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "4.*"
     },
     "autoload": {
         "psr-4": {
             "alarm3d\\leaflet\\plugins\\routing\\": "src"
         }
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        },
-        "asset-installer-paths": {
-            "bower-asset-library": "vendor/bower"
-        }
-    }
 }
