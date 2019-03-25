@@ -1,16 +1,16 @@
 {
-    "name": "alarm3d/yii2-leaflet-routing-plugin",
-    "description": "Yii2 LeafLet Plugin routing to Leaflet.",
-    "license": "MIT",
-    "authors": [
+  "name": "alarm3d/yii2-leaflet-routing-plugin",
+  "description": "Yii2 LeafLet Plugin routing to Leaflet.",
+  "license": "MIT",
+  "require": {
+    "2amigos/yii2-leaflet-extension": "1.*"
+  },
+  "authors": [
         {
             "name": "alarm3d"
         }
     ],
-    "require": {
-        "2amigos/yii2-leaflet-extension": "1.*"
-    },
-    "autoload": {
+	"autoload": {
         "psr-4": {
             "alarm3d\\leaflet\\plugins\\routing\\": "src"
         }
