@@ -15,12 +15,12 @@ use yii\web\JsExpression;
  */
 class Routing extends Plugin
 {
-
     public $token;
+    public $content;
     public $start;
     public $end;
     public $service;
-    public $styleLine=[];
+    public $styleLine = [];
 
     /**
      * Returns the plugin name
@@ -49,12 +49,17 @@ class Routing extends Plugin
     public function encode()
     {
         $token = $this->token;
+        $content = $this->content;
         //
         $options = '{
         language: \'en\',
 	    routeWhileDragging: true,
         reverseWaypoints: true,
         router: L.routing.mapbox("' . $token . '"),
+        createMarker: function(i, wp, nWps) {
+        return L.marker(wp.latLng)
+            .bindPopup("'.$content.'");
+    },
         waypoints: [
             L.latLng(' . implode(',', $this->start) . '),
             L.latLng(' . implode(',', $this->end) . ')
@@ -69,13 +74,10 @@ class Routing extends Plugin
         }';
         $name = $this->getName();
         $map = $this->map;
-
         $js = "L.Routing.control($options).addTo($map)";
-
         if (!empty($name)) {
             $js = "var $name = $js;";
         }
-
         return new JsExpression($js);
     }
 
